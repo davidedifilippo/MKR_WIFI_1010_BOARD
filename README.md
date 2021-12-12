@@ -4,7 +4,7 @@ Si include la libreria di gestione del chip WiFi:
 
 #include <WiFiNINA.h>
   
-##Setup della scheda
+## Setup della scheda
 
 Si cerca di avviare il chip wifi in modalità AP (access Point) provando ogni 10 secondi a connettersi al router locale 
    
