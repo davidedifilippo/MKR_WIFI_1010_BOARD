@@ -2,35 +2,34 @@
 
 Si include la libreria di gestione del chip WiFi:
 
-#include <WiFiNINA.h>
+        #include <WiFiNINA.h>
+
+Si crea un oggetto WiFiServer in ascolto sulla porta 80: 
+
+        WiFiServer server(80);            //server socket
   
 ## Setup della scheda
 
 Si cerca di avviare il chip wifi in modalità AP (access Point) provando ogni 10 secondi a connettersi al router locale 
    
-    int status = WL_IDLE_STATUS;   //Stato attuale -> IDLE 
-    while (status != WL_CONNECTED) {
-  
-    status = WiFi.begin("SSID...", "PASSWORD...");
-   
-    delay(10000);  // wait 10 seconds for connection:
-    }
+        //Stato attuale -> IDLE 
+        
+        while (status != WL_CONNECTED) {
+        status = WiFi.begin("SSID...", "PASSWORD...");
+        delay(10000);  // wait 10 seconds for connection:
+          }
 
 Bisogna sostituire a:
 
-- ssid la stringa identificativa del router
-- password la password del router 
+- SSID  la stringa identificativa del router
+- PASSWORD la password del router 
 
  Si stampa l'indirizzo IP assegnato dal router alla board:
  
-  IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
-  Serial.println(ip);
+        IPAddress ip = WiFi.localIP();
+        Serial.print("IP Address: ");
+        Serial.println(ip);
 
-Si crea un oggetto WiFiServer in ascolto sulla porta 80: 
-
-        WiFiServer server(80);            //server socket
-        
 
 Si avvia il server:
 
