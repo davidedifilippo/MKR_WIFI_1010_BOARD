@@ -10,7 +10,7 @@ Si crea un oggetto WiFiServer in ascolto sulla porta 80:
   
 ## Setup della scheda
 
-Si cerca di avviare il chip wifi in modalità AP (access Point) provando ogni 10 secondi a connettersi al router locale 
+Si prova ogni 10 secondi a connettersi al router locale 
    
         //Stato attuale -> IDLE 
         
